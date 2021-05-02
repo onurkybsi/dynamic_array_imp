@@ -9,7 +9,7 @@
     }
 
 #define unpack_list(list) \
-    (char **)&(list)->storage_array, &(list))->count, &(list)->capacity, sizeof(*(list)->storage_array)
+    (char **)&(list)->storage_array, &(list)->count, &(list)->capacity, sizeof(*(list)->storage_array)
 
 #define push_to_list(list, val) \
     (expand_list_if_necessary(unpack_list(list)) ? -1 : (list)->storage_array[(list)->count++] = (val), 0), 0)

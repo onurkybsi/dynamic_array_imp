@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "./src/list.h"
 
 int main()
@@ -7,7 +8,7 @@ int main()
     // int *testPtr = &test;
     // char **testPtrPtr = &testPtr;
 
-    int test = 3 << 2;
+    // int test = 3 << 2;
 
     return 0;
 }
