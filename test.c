@@ -4,11 +4,17 @@
 
 int main()
 {
-    // int test = 3;
-    // int *testPtr = &test;
-    // char **testPtrPtr = &testPtr;
+    list_int test;
+    init_list(&test);
+    push_to_list(&test, 1);
+    push_to_list(&test, 2);
+    push_to_list(&test, 3);
+    push_to_list(&test, 4);
 
-    // int test = 3 << 2;
+    for (int i = 0; i < test.count; i++)
+    {
+        printf("%d\n", test.storage_array[i]);
+    }
 
     return 0;
 }

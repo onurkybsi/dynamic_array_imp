@@ -1,0 +1,28 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe etkin dosyayı derle",
+            "command": "C:\\MinGW\\bin\\gcc.exe",
+            "args": [
+                "-g",
+				"${fileDirname}\\src\\imp\\list.c",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Hata Ayıklayıcısı tarafından oluşturulan görev."
+        }
+    ],
+    "version": "2.0.0"
+}
