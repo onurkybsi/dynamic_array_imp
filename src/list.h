@@ -1,5 +1,5 @@
-#ifndef _LIST_H
-#define _LIST_H
+#ifndef LIST_H
+#define LIST_H
 
 #define list_t(T)            \
     struct                   \
@@ -16,6 +16,9 @@
 
 #define push_to_list(list, val) \
     (expand_list_if_necessary(unpack_list(list)) ? -1 : ((list)->storage_array[(list)->count++] = (val), 0), 0)
+
+#define pop_from_list(list) \
+    (list)->storage_array[--(list)->count]
 
 int expand_list_if_necessary(char **storage_array, int *count, int *capacity, int size_of_stored);
 
