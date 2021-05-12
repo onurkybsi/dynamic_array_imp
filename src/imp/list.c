@@ -19,3 +19,11 @@ int expand_list_if_necessary(char **storage_array, int *count, int *capacity, in
 
     return 0;
 }
+
+void splice_list(char **storage_array, int *count, int *capacity, int item_memory_size,
+                 int start, int range)
+{
+    memmove(*storage_array + start * item_memory_size,
+            *storage_array + (start + 1) * item_memory_size,
+            ((*count - start) + range) * item_memory_size);
+}
